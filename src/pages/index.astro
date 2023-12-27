@@ -1,9 +1,41 @@
 ---
+import Badge from '../components/badge.astro';
+import LinkIn from '../icons/linkin.astro';
+import Github from '../icons/github.astro';
 import Layout from '../layouts/Layout.astro';
+import SocialPill from '../components/social-pill.astro';
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<h1>Portfolio</h1>
+		<section class="w-full lg:w-[740px] py-44">
+			<img class="rounded-full mb-4 w-24 h-24" src="./profile.jpeg" alt="Imagen de perfil de Maruan V. Cardenas">
+			<h1 class="text-5xl font-bold flex gap-x-4 pb-4">
+				Hey, Soy Maruan
+				<a
+					href="https://www.linkedin.com/in/maruan-cardenas/"
+					target="_blank"
+					rel="noopener"
+					class="flex justify-center items-start">
+					<Badge>Disponible para trabajar</Badge>
+				</a>
+			</h1>
+			<h2 class="text-xl opacity-80 text-wrap">
+				<span>+3 años de experiancia.</span>
+				<span class="text-yellow-100/90">Desarrollador Web.</span>
+				<span class="text-red-100/90">De Córdoba, España.</span> 
+				<span class="opacity-80">Me Especializo en Next JS.</span>
+			</h2>
+			<nav class="flex gap-2 mt-4">
+				<SocialPill link="https://www.linkedin.com/in/maruan-cardenas/">
+					<LinkIn class="w-6 h-6" />
+					LinkIn
+				</SocialPill>
+				<SocialPill link="https://github.com/Maruan-Cardenas">
+					<Github class="w-6 h-6" />
+					Github
+				</SocialPill>
+			</nav>
+		</section>
 	</main>
 </Layout>
